@@ -1,0 +1,38 @@
+/*     header     */
+h1{
+    font-family: "Poppins";
+    font-size: 90px;
+    font-weight: 800;
+    color: white;
+    margin-left: 44rem;
+    margin-top: 0px;
+}
+#logo{
+    width: 200px;
+}
+.banner{
+    height: 200px;
+    background-color: #141816;
+}
+#leftrow{
+    width: 15%;
+    background-color: #e25659;
+}
+
+/*      home      */
+main{
+    display: flexbox;
+}
+section{
+    width: 85%;
+}
+
+/*     search     */
+
+
+
+/*      form      */
+.formrow{
+    display:block;
+}
+/*      proc      */

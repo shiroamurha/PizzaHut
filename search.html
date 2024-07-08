@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Página de Pesquisa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Pesquisa</a></li>
+                <li><a href="form.html">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pesquisa">
+            <h1>Pesquisar Dados</h1>
+            <form id="pesquisa-form">
+                <label for="keyword">Palavra-chave:</label>
+                <input type="text" id="keyword" name="keyword" required>
+                <button type="submit">Filtrar</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seleção</th>
+                        <th>Dados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="radio" id="ex1"></td>
+                        <td>Exemplo de dado 1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="ex2"></td>
+                        <td>Exemplo de dado 2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="ex3"></td>
+                        <td>Exemplo de dado 3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="ex4"></td>
+                        <td>Exemplo de dado 4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="ex5"></td>
+                        <td>Exemplo de dado 5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="ex6"></td>
+                        <td>Exemplo de dado 6</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <button onclick="window.location.href = 'form.html';">Inserir</button></a>
+            <button onclick="window.location.href = 'form.html';">Atualizar</button>
+            <button onclick="del_item()">Excluir</button>
+        </section>
+    </main>
+</body>
+</html>
