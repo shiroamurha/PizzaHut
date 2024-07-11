@@ -4,7 +4,7 @@ body{
 }
 h1{
     font-family: "Poppins";
-    font-size: 90px;
+    font-size: 65px;
     font-weight: 800;
 }
 header{
@@ -68,7 +68,9 @@ header{
 /*      home      */
 .container{
     display: flex;
-    margin-top: 200px;
+    padding-top: 200px;
+    background-color: #2A2F36;
+    color: #FFFFFF;
 }
 .content{
     margin-left: 300px;
@@ -85,6 +87,14 @@ header{
 
 /*      form      */
 .formrow{
-    display:block;
+    display: block;
+    width: 160%;
+    padding-bottom: 25px;
+}
+#frequencia-nome{
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-top: -10px;
 }
 /*      proc      */

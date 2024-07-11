@@ -1,9 +1,4 @@
-function consultarFrequencia() {
-    var nome = document.getElementById("nome").value;
-    // Simulação da consulta de frequência
-    var frequencia = Math.floor(Math.random() * 100) + 1;
-    document.getElementById("frequencia-nome").innerText = `O nome "${nome}" tem uma frequência de ${frequencia} registros.`;
-}
+
 function del_item(){
     selected_items = [
         document.getElementById('ex1'), 
@@ -25,10 +20,7 @@ function del_item(){
     
 }
 
-document.getElementById('cpf').addEventListener('input', function (event) {
-    let input = event.target;
-    input.value = formatCPF(input.value);
-});
+
 
 function formatCPF(value) {
     
@@ -39,6 +31,10 @@ function formatCPF(value) {
 
     return value;
 }
+document.getElementById('cpf').addEventListener('input', function (event) {
+    let input = event.target;
+    input.value = formatCPF(input.value);
+});
 document.getElementById('nasc').addEventListener('input', function (event) {
     let input = event.target;
     input.value = formatBDate(input.value);
@@ -54,39 +50,100 @@ function formatBDate(value) {
 }
 
 function validarCPF(cpf) {
-    cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
 
-    // Verifica se todos os dígitos são iguais
-    if (cpf.length !== 11 || cpf.split('').every(c => c === cpf[0])) {
+    cpf = cpf.replace(/[^\d]+/g, '');
+
+    let add = 0;
+    for (let i = 0; i < 9; i++) {
+        add += parseInt(cpf.charAt(i)) * (10 - i);
+    }
+    let rev = 11 - (add % 11);
+    if (rev === 10 || rev === 11) {
+        rev = 0;
+    }
+    if (rev !== parseInt(cpf.charAt(9))) {
         return false;
     }
 
-    // Calcula os dígitos verificadores
-    for (var t = 9; t < 11; t++) {
-        var sum = 0, factor = t + 1;
-        for (var i = 0; i < t; i++) {
-            sum += parseInt(cpf[i]) * --factor;
-        }
-        var checkDigit = (sum * 10) % 11;
-        if (checkDigit === 10 || checkDigit === 11) {
-            checkDigit = 0;
-        }
-        if (checkDigit !== parseInt(cpf[t])) {
-            return false;
-        }
+    add = 0;
+    for (let i = 0; i < 10; i++) {
+        add += parseInt(cpf.charAt(i)) * (11 - i);
     }
+    rev = 11 - (add % 11);
+    if (rev === 10 || rev === 11) {
+        rev = 0;
+    }
+    if (rev !== parseInt(cpf.charAt(10))) {
+        return false;
+    }
+
     return true;
 }
 
-document.getElementById('cpf').addEventListener('submit', function(event) {
-    var cpfInput = document.getElementById('cpf');
-    var cpfError = document.getElementById('cpfError');
-    var cpfValue = cpfInput.value;
-
-    if (!validarCPF(cpfValue)) {
+document.getElementById('form').addEventListener('submit', function(event) {
+    const cpfInput = document.getElementById('cpf');
+    const cpfError = document.getElementById('cpfError');
+    if (!validarCPF(cpfInput.value)) {
         cpfError.style.display = 'block';
-        event.preventDefault(); // Impede o envio do formulário
+        alert("CPF inválido. Por favor, insira um CPF válido.");
+        event.preventDefault();
+
     } else {
         cpfError.style.display = 'none';
     }
 });
+
+document.getElementById('cpf').addEventListener('input', function() {
+    const cpfError = document.getElementById('cpfError');
+    cpfError.style.display = 'none';
+});
+
+
+
+function consultanome(){
+    event.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+
+    if (nome) {
+        const ibge_coisa = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${nome}`;
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", ibge_coisa, true);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText);
+                displayResult(data);
+            } else {
+                displayError('Erro na consulta à API');
+            }
+        };
+
+        xhr.onerror = function() {
+            displayError('Erro de rede');
+        };
+
+        xhr.send();
+    }
+};
+
+function displayResult(data) {
+    const resultDiv = document.getElementById('frequencia-nome');
+    resultDiv.innerHTML = '';
+
+    if (data.length === 0) {
+        resultDiv.innerHTML = 'Nenhuma ocorrência encontrada.';
+        return;
+    }
+
+    const nameData = data[0];
+    const frequencies = nameData.res;
+    const totalOccurrences = frequencies.reduce((sum, freq) => sum + freq.frequencia, 0);
+
+    resultDiv.innerHTML = `Ocorrência total: ${totalOccurrences}`;
+}
+
+function displayError(message) {
+    const resultDiv = document.getElementById('frequencia-nome');
+    resultDiv.innerHTML = `${message}`;
+}
