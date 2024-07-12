@@ -1,47 +1,34 @@
- Reset CSS
-* {
+/*     header     */
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #2A2F36;
-    color: #FFFFFF;
-    line-height: 1.6;
 }
-
-
-header {
+h1{
+    font-family: "Poppins";
+    font-size: 50px;
+    font-weight: 800;
+}
+header{
     background-color: #141816;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     height: 160px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
-
-header h1 {
-    font-size: 50px;
-    font-weight: 800;
-}
-
-header #logo {
+#logo{
     position: absolute;
-    left: 20px;
-    width: 250px;
+    width: 225px;
+    left: 10px;
+    
 }
-
-
-.leftrow {
+.leftrow{
     width: 245px;
     padding-top: 20px;
     height: calc(100vh - 160px); /* altura da tela menos a altura do header */
@@ -49,67 +36,62 @@ header #logo {
     top: 160px;
     background-color: #e25659;
 }
-
-.leftrow ul {
-    list-style-type: none;
+.leftrow ul{
     padding: 0px;
+    list-style-type: none;
 }
-
-.leftrow li {   
-    margin-top: 20px;
+.leftrow li{
+    margin-top: 30px;
 }
+.leftrow button{
 
-.leftrow button {
-    
-    align-items: center;
-    justify-content: flex-start;
-    padding: 15px;
-    width: 100%;
-    border: none;   
-    background-color: #e25659;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.leftrow button img {
-    margin-right: 10px;
-}
-
-.leftrow button:hover {
-    background-color: #ad3133;
-    color: #d1c6c6;
-}
-
-
-.container {
     display: flex;
-    margin-top: 160px;
-    padding: 20px;
-    margin-left: -20px;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+
+    background-color: #e25659;
+    border-color: #d14e50;
+    color: white;
+    
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 800;
+    height: 75px;
+    width: 245px;   
+
+    transition: background-color 0.6s, color 0.6s; 
+
+}
+.leftrow button:hover{
+    background-color: #ad3133;
+    color: rgb(197, 188, 188);
+    transition: background-color 0.6s, color 0.6s;
+}
+.leftrow img{
+    display: flex;
+    align-items: left;
+    margin-left: 20px;
+}
+.leftrow span{
+    margin-right: 40px;
+}
+
+/*      home      */
+.container{
+    display: flex;
+    padding-top: 200px;
     background-color: #2A2F36;
     color: #FFFFFF;
 }
-
-.content {
-    flex: 1;
-    margin-left: 245px;
-    padding: 20px;
-    background-color: #3A3F46;
-    border-radius: 5px;
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    font-size: 18px;
+.content{
+    margin-left: 300px;
+    margin-right: 60px;
+    text-align: justify;
+    font-family: "Poppins";
+    font-size: 20px;
 }
 
-
-.formrow {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
-}
 
 label {
     font-size: 16px;
@@ -212,3 +194,21 @@ table tr:hover {
 table td input[type="radio"] {
     margin-right: 10px;
 }
+
+/*     search     */
+ 
+
+
+/*      form      */
+.formrow{
+    display: block;
+    width: 160%;
+    padding-bottom: 25px;
+}
+#frequencia-nome{
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+/*      proc      */
