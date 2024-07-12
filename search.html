@@ -11,7 +11,7 @@
     <link rel="icon" href="misc/pizzahut_logo.png" type="image/png">
     <script src="misc/scripts.js" defer></script>
 </head>
-<body>
+<body> 
     <header class="toprow"> 
         <img id="logo" src="misc/Eclipse logo.png"/>
             <h1>Pesquisar</h1>
@@ -36,11 +36,11 @@
                 </button></li>
             </ul>
         </nav>
-        <section class="content">
+        <section class="content-search">
             <form id="pesquisa-form">
                 <label for="keyword">Palavra-chave:</label>
                 <input type="text" id="keyword" name="keyword" required>
-                <button type="submit">Filtrar</button>
+                <button id="filt" type="submit">Filtrar</button>
             </form>
             <table>
                 <thead>
@@ -82,5 +82,6 @@
             <button onclick="del_item()">Excluir</button>
         </section>
     </main>
+    <footer><img src="misc/footer.png"></footer>
 </body>
 </html>
