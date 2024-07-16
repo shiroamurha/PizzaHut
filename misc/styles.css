@@ -81,9 +81,11 @@ footer img {
     width: 100%;
     z-index: 2000;
     position: absolute;
+
 }
 
 /*      home      */
+
 .container{
     display: flex;
     padding-top: 200px;
@@ -98,6 +100,33 @@ footer img {
     font-size: 20px;
 }
 
+.p1{
+    opacity: 0;
+    transform: translateY(50px);
+    animation: aparecetexto 0.7s ease-in-out forwards;
+}
+.p2{
+    opacity: 0;
+    transform: translateY(60px);
+    animation: aparecetexto 2s ease-in-out forwards;
+}
+
+.p3{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecetexto 4s ease-in-out forwards;
+}
+
+@keyframes aparecetexto {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 label {
     font-size: 16px;
@@ -148,7 +177,48 @@ textarea {
     font-size: 20px;
 }
 .content-search table{
-    width: 150%;
+    width: 700px;
+}
+div#table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#button-column-search{
+    width: 105px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+#button-column-search button{
+    height: 105px;
+    width: 90px;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: white;
+    border: none;
+    box-shadow: 2px 3px 0px 1px #141313;
+    transition: all 0.3s;
+}
+#button-column-search button.g{
+    background-color: #6d9b65;
+}
+#button-column-search button.g:hover{
+    
+    background-color: #52744c;
+    color: rgb(183, 197, 183);
+    transition: all 0.3s;
+}
+#button-column-search button#del{
+    background-color: #e25659;
+}
+#button-column-search button#del:hover{
+    background-color: #ad2e30;
+    color: rgb(183, 197, 183);
+    transition: all 0.3s;
 }
 #filt{
     background-color: #e25659;
@@ -176,7 +246,9 @@ table {
 
 table th,
 table td {
-    padding: 12px;
+    font-size: 18px;
+    padding: 10px;
+    height: 20px;
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -200,6 +272,7 @@ table tr:hover {
 table td input[type="radio"] {
     margin-right: 10px;
 }
+
 
 
 /*      form      */
