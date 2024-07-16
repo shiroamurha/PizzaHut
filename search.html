@@ -40,46 +40,50 @@
             <form id="pesquisa-form">
                 <label for="keyword">Palavra-chave:</label>
                 <input type="text" id="keyword" name="keyword" required>
-                <button id="filt" type="submit">Filtrar</button>
+                <button id="filt" type="submit">Filtrar</button><br>
             </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Seleção</th>
-                        <th>Dados</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="radio" id="ex1"></td>
-                        <td>Exemplo de dado 1</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="ex2"></td>
-                        <td>Exemplo de dado 2</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="ex3"></td>
-                        <td>Exemplo de dado 3</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="ex4"></td>
-                        <td>Exemplo de dado 4</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="ex5"></td>
-                        <td>Exemplo de dado 5</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="ex6"></td>
-                        <td>Exemplo de dado 6</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-            <button onclick="window.location.href = 'form.html';">Inserir</button></a>
-            <button onclick="window.location.href = 'form.html';">Atualizar</button>
-            <button onclick="del_item()">Excluir</button>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Seleção</th>
+                            <th>Dados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="radio" id="ex1"></td>
+                            <td>Exemplo de dado 1</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="ex2"></td>
+                            <td>Exemplo de dado 2</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="ex3"></td>
+                            <td>Exemplo de dado 3</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="ex4"></td>
+                            <td>Exemplo de dado 4</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="ex5"></td>
+                            <td>Exemplo de dado 5</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="ex6"></td>
+                            <td>Exemplo de dado 6</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div id="button-column-search">
+                    <button class="g" onclick="window.location.href = 'form.html';">Inserir</button><br>
+                    <button class="g" onclick="window.location.href = 'form.html';">Atualizar</button><br>
+                    <button id="del" onclick="del_item()">Excluir</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer><img src="misc/footer.png"></footer>
