@@ -101,7 +101,6 @@ document.getElementById('cpf').addEventListener('input', function() {
 
 
 function consultanome(){
-    event.preventDefault();
     const nome = document.getElementById('nome').value.trim();
 
     if (nome) {
@@ -141,6 +140,7 @@ function displayResult(data) {
     const totalOccurrences = frequencies.reduce((sum, freq) => sum + freq.frequencia, 0);
 
     resultDiv.innerHTML = `Ocorrência total: ${totalOccurrences}`;
+
 }
 
 function displayError(message) {

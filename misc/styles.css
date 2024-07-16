@@ -114,7 +114,7 @@ footer img {
 .p3{
     opacity: 0;
     transform: translateY(20px);
-    animation: aparecetexto 4s ease-in-out forwards;
+    animation: aparecetexto 2.5s ease-in-out forwards;
 }
 
 @keyframes aparecetexto {
@@ -159,10 +159,7 @@ textarea {
 
 
 
-.error {
-    color: #e25659;
-    font-size: 14px;
-}
+
 
 
 
@@ -172,7 +169,7 @@ textarea {
     margin-left: 300px;
     margin-right: 60px;
     text-align: justify;
-    padding-bottom: 125px;
+    padding-bottom: 18%;
     font-family: "Poppins";
     font-size: 20px;
 }
@@ -278,15 +275,117 @@ table td input[type="radio"] {
 /*      form      */
 .formrow{
     display: block;
-    width: 160%;
+    width: 100%;
     padding-bottom: 25px;
 }
+.formrow input, textarea, select{
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#local{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#endereco{
+    height: 80px;
+    width: 350px;
+    overflow: auto;
+    resize: none;
+}
+#cpf{
+    width: 160px;
+}
+.error {
+    color: #e25659;
+    font-size: 14px;
+}
+#nasc{
+    width: 150px;
+}
+#consulta{
+    height: 40px;
+    width: 210px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white;
+    border: none;
+    box-shadow: 2px 3px 0px 1px #141313;
+    transition: all 0.3s;
+    background-color: #6d9b65;
+    border-radius: 7px;
+}
+#consulta:hover{
+    
+    background-color: #52744c;
+    color: rgb(183, 197, 183);
+    transition: all 0.3s;
+}
 #frequencia-nome{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
     font-size: 16px;
     display: inline-block;
     margin-bottom: -10px;
     margin-top: -10px;
 }
+.gen{
+    margin-right: 15px;
+    font-size: 16px;
+}
+#descricao-outro{
+    width: 150px;
+}
+#masculino, #feminino, #outro{
+    
+    margin-left: 0;
+    margin-right: -3px;
+    height: 15px;
+    width: 15px;
+}
+h3 {
+    margin: 0;
+}
+#submitform, #cancelform{
+    font-family: 'Poppins';
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white;
+    border: none;
+    box-shadow: 2px 3px 0px 1px #141313;
+    transition: all 0.3s;
+    border-radius: 7px;
+    height: 40px;
+    width: 120px;
+    font-size: 18px;
+}
+#submitform{
+    background-color: #6d9b65;
+}
+#cancelform{
+    background-color: #e25659;
+}
+#submitform:hover{
+    background-color: #52744c;
+    color: rgb(183, 197, 183);
+    transition: all 0.3s;
+}
+
+#cancelform:hover{
+    background-color: #ad2e30;
+    color: rgb(183, 197, 183);
+    transition: all 0.3s;
+}
+
+
+
 /*      proc      */
 .content-proc{
     
