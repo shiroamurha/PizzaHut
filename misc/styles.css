@@ -14,7 +14,7 @@ header{
     justify-content: center;
     color: white;
     padding: 10px 20px;
-    position: fixed;
+    position: fixed; 
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -132,21 +132,6 @@ label {
     font-size: 16px;
     margin-bottom: 5px;
 }
-
-input[type="text"],
-input[type="email"],
-textarea,
-
-select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 270px;
-
-}
-
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -268,21 +253,50 @@ table tr:hover {
 
 table td input[type="radio"] {
     margin-right: 10px;
+    height: 20px;
+    width: 20px;
 }
 
 
 
 /*      form      */
+.content-form{
+    margin-left: 270px;
+    margin-right: 60px;
+    text-align: justify;
+    font-family: "Poppins";
+    font-size: 20px;
+}
+form{
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 0;
+    width: 100%;
+    background-color: rgb(35, 31, 32);
+    margin-bottom: 6.6%;
+}
 .formrow{
     display: block;
-    width: 100%;
+    width: 110%;
     padding-bottom: 25px;
 }
 .formrow input, textarea, select{
     border-radius: 10px;
     margin-right: 10px;
+    
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 500;
 }
-
+#nome{
+    width: 285px;
+}
 #local{
     display: flex;
     align-items: center;
@@ -302,9 +316,15 @@ table td input[type="radio"] {
 .error {
     color: #e25659;
     font-size: 14px;
+    padding-right: 20px;
 }
 #nasc{
     width: 150px;
+    font-size: 14px;
+}
+#email{
+    width: 330px;
+    margin-left: 20px;
 }
 #consulta{
     height: 40px;
@@ -341,12 +361,22 @@ table td input[type="radio"] {
     font-size: 16px;
 }
 #descricao-outro{
-    width: 150px;
+    width: 190px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 500;
 }
 #masculino, #feminino, #outro{
     
     margin-left: 0;
-    margin-right: -3px;
+    margin-right: 5px;
+    margin-top: 5px;
     height: 15px;
     width: 15px;
 }
@@ -362,14 +392,15 @@ h3 {
     box-shadow: 2px 3px 0px 1px #141313;
     transition: all 0.3s;
     border-radius: 7px;
-    height: 40px;
-    width: 120px;
+    height: 50px;
+    width: 190px;
     font-size: 18px;
 }
 #submitform{
     background-color: #6d9b65;
 }
 #cancelform{
+    margin-left: 25px;
     background-color: #e25659;
 }
 #submitform:hover{
@@ -383,8 +414,39 @@ h3 {
     color: rgb(183, 197, 183);
     transition: all 0.3s;
 }
+#genpref{
+    display: flex;
+    justify-content: flex-start;
+    align-items: safe;
+    width: 80%;
+}
+#prefs{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 20%;
+    padding-left: 0px;
+    margin-left: -220px;
+    margin-top: -5px;
 
-
+}
+#prefs li{
+    width: 125px;
+    justify-content: space-between;
+}
+#pref-title{
+    display: flex;
+    height: 30px;
+    margin-left: 125px;
+    margin-top: -40px;
+}
+.formrow-submit{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding-right: 10px;
+    margin-top: 20px;
+}
 
 /*      proc      */
 .content-proc{
