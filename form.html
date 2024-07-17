@@ -36,7 +36,7 @@
                 </button></li>
             </ul>
         </nav>
-        <section class="content">
+        <section class="content-form">
             <form id="form" action="proc.html">
                 <row class="formrow">
                     <input type="text" id="nome" name="nome" placeholder="Nome" maxlength="100" required>
@@ -103,8 +103,8 @@
                     </select>
                 </row>
                 
-                <row class="formrow">
-                    <h3>Gênero:</h3>
+                <h3>Gênero:</h3>
+                <row id="genpref">
                     
                     <input type="radio" id="masculino" name="genero" value="masculino">
                     <label class="gen" for="masculino">Masculino</label>
@@ -114,13 +114,10 @@
 
                     <input type="radio" id="outro" name="genero" value="outro" required>
                     <input class="gen" type="text" id="descricao-outro" name="descricao-outro" placeholder="Outro" maxlength="30">
-                </row>    
                 
-                
-                
-                <row class="formrow">
-                    <label>Preferências:</label>
-                    <ul>
+                    
+                    <label id="pref-title"><h3>Preferências:</h3></label>
+                    <ul id="prefs">
                         <li>
                             <input type="checkbox" id="esportes" name="preferencias" value="esportes">
                             <label for="esportes">Esportes</label>
@@ -149,10 +146,12 @@
                             <input type="checkbox" id="Tecnologia" name="preferencias" value="Tecnologia">
                             <label for="Tecnologia">Tecnologia</label>
                         </li>
+                    </ul>
                 </row>
-                
-                <button type="submit" id="submitform">Salvar</button>
-                <button type="reset" id="cancelform">Cancelar</button>
+                <row class="formrow-submit">
+                    <button type="submit" id="submitform">Salvar</button>
+                    <button type="reset" id="cancelform">Cancelar</button>
+                </row>
             </form>
         </section>
     </main>
